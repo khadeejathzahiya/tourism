@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+        <form action="index.html" id="fm">
+            <div class="form">
+                <h2>login to your account</h2>
+                <input id="myEmail" type="email name" name="name" placeholder="email" required>
+                <input id="myPass" type="password" name="address" placeholder="password" required>
+                <button class="btn1" type="submit">login</button><br>
+                <p class="error" id="para"></p>
+                <p class="link">Don't have an account<br>
+                    <a href="#">Sign up </a>Here
+                </p>
+                <p class="liw">login in</p>
+            </div>
+        </form>
+
+
+
+        <!-- <div>
+            <div class="quote">
+                <h1 class="login-head">travel is only the thing <br>you buy that make you <br>richer </h1>
+
+
+            </div>
+        </div> -->
+    </div>
+
+
+
+    <script>
+        let form = document.querySelector("#fm")
+        let myEmailInput = document.querySelector("#myEmail")
+        let myPassInput = document.querySelector("#myPass")
+        let para = document.querySelector("#para")
+        myEmailInput.focus;
+
+        let email = "zahya@gmail.com";
+        let password = "zaaeyaah";
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let myEmail = fm.myEmail.value;
+            let myPass = fm.myPass.value;
+
+
+            if (myEmail == email) {
+                if (myPass == password) {
+                    form.submit();
+                    form.reset();
+                } else {
+                    para.textContent = "wrong password"
+                }
+            } else {
+                para.textContent = "wrong email"
+            }
+
+
+
+        })
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
